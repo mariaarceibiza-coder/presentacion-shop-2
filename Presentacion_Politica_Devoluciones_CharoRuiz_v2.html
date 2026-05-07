@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Devoluciones · Propuesta · Charo Ruiz Export</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F8F3EA;
+  --cream-deep: #EDE5D5;
+  --ink: #1F1A14;
+  --ink-soft: #4A4036;
+  --ink-mute: #7A6F60;
+  --terracotta: #A8421D;
+  --terracotta-soft: #C8643D;
+  --olive: #5C6B3D;
+  --olive-soft: #7A8B57;
+  --gold: #B89968;
+  --gold-soft: #D4B98A;
+  --red: #8B2D1F;
+  --green-bg: #E8EBDF;
+  --red-bg: #F4E5E0;
+  --gold-bg: #F1E8D4;
+  --shadow-soft: rgba(31, 26, 20, 0.06);
+  --shadow-medium: rgba(31, 26, 20, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  position: relative;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 100;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Display typography */
+.display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.display-italic {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.label {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.body-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.body-text-large {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.numeral {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 300;
+  font-feature-settings: "lnum";
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+/* Slide container */
+.deck {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  padding: 70px 90px 90px 90px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+.slide.active .reveal {
+  animation: reveal 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(14px);
+}
+.slide.active .reveal-1  { animation-delay: 0.05s; }
+.slide.active .reveal-2  { animation-delay: 0.15s; }
+.slide.active .reveal-3  { animation-delay: 0.25s; }
+.slide.active .reveal-4  { animation-delay: 0.35s; }
+.slide.active .reveal-5  { animation-delay: 0.45s; }
+.slide.active .reveal-6  { animation-delay: 0.55s; }
+.slide.active .reveal-7  { animation-delay: 0.65s; }
+.slide.active .reveal-8  { animation-delay: 0.75s; }
+.slide.active .reveal-9  { animation-delay: 0.85s; }
+
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Top header bar */
+.deck-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 22px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  pointer-events: none;
+}
+.deck-header > * { pointer-events: auto; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.brand-mark {
+  width: 8px; height: 8px;
+  background: var(--terracotta);
+  border-radius: 50%;
+}
+.deck-header .meta {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 500;
+}
+
+/* Bottom navigation */
+.deck-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 22px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  background: linear-gradient(to top, var(--cream) 30%, rgba(248, 243, 234, 0));
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.dot {
+  width: 22px;
+  height: 2px;
+  background: var(--ink-mute);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+.dot:hover { opacity: 0.6; }
+.dot.active {
+  background: var(--terracotta);
+  opacity: 1;
+  width: 36px;
+}
+
+.nav-arrows {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.arrow-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-mute);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  color: var(--ink);
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+}
+.arrow-btn:hover {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+.arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.arrow-btn:disabled:hover {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink-mute);
+}
+
+.slide-counter {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-mute);
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Progress bar */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--terracotta);
+  z-index: 51;
+  transition: width 0.6s ease;
+}
+
+/* ============ SLIDE 1: COVER ============ */
+.cover {
+  flex-direction: row;
+  align-items: stretch;
+  padding: 100px 90px;
+  gap: 60px;
+}
+.cover-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cover-right {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 24px;
+}
+.cover-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 80px;
+}
+.cover-eyebrow .line {
+  width: 60px; height: 1px;
+  background: var(--terracotta);
+}
+.cover-title {
+  font-size: clamp(60px, 9vw, 132px);
+  margin-bottom: 30px;
+}
+.cover-title em {
+  color: var(--terracotta);
+  font-style: italic;
+  font-weight: 300;
+}
+.cover-subtitle {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 28px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  line-height: 1.3;
+}
+.cover-meta {
+  margin-top: 60px;
+  display: flex;
+  gap: 50px;
+  align-items: flex-end;
+}
+.cover-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cover-meta-item .label {
+  color: var(--ink-mute);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+}
+.cover-meta-item .value {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.cover-decor {
+  width: 200px;
+  height: 280px;
+  position: relative;
+  border: 1px solid var(--ink-mute);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 18px;
+}
+.cover-decor::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--gold);
+}
+.cover-decor-text {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+.cover-decor-text strong {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 4px;
+  color: var(--terracotta);
+}
+.cover-decor-num {
+  font-family: 'Fraunces', serif;
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.18em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============ STANDARD SLIDE LAYOUT ============ */
+.slide-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+.slide-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.slide-eyebrow-row .line {
+  width: 40px; height: 1px;
+  background: var(--terracotta);
+}
+.slide-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--ink-mute);
+}
+.slide-title {
+  font-size: clamp(44px, 5.5vw, 76px);
+  letter-spacing: -0.025em;
+}
+.slide-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--terracotta);
+}
+.slide-subtitle {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin-top: 8px;
+}
+
+.slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============ SLIDE 2: PROBLEM ============ */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  flex: 1;
+}
+.problem-card {
+  background: var(--cream-deep);
+  padding: 30px 32px;
+  border-left: 2px solid var(--terracotta);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px var(--shadow-medium);
+}
+.problem-card .num {
+  font-family: 'Fraunces', serif;
+  font-size: 38px;
+  font-weight: 300;
+  color: var(--terracotta);
+  line-height: 1;
+}
+.problem-card h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.problem-card p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* ============ SLIDE 3: COST ============ */
+.cost-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  flex: 1;
+  align-content: center;
+}
+.cost-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+}
+.cost-pillar:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px; bottom: 20px;
+  right: -25px;
+  width: 1px;
+  background: var(--ink-mute);
+  opacity: 0.3;
+}
+.cost-pillar .label {
+  color: var(--terracotta);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+.cost-figure {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 90px;
+  line-height: 0.95;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  margin: 6px 0;
+}
+.cost-figure .placeholder {
+  color: var(--ink-mute);
+  font-style: italic;
+  font-size: 0.7em;
+}
+.cost-figure .currency {
+  font-size: 0.55em;
+  vertical-align: baseline;
+  color: var(--terracotta);
+  margin-right: 4px;
+}
+.cost-pillar h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--ink);
+}
+.cost-pillar p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.cost-tag {
+  display: inline-block;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-top: 4px;
+}
+
+/* ============ SLIDE 4: PROPOSAL ============ */
+.proposal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  margin-top: -10px;
+}
+.proposal-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--ink-mute);
+  border-bottom-color: rgba(122, 111, 96, 0.2);
+  transition: padding 0.3s ease;
+}
+.proposal-item:hover {
+  padding-left: 12px;
+}
+.proposal-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 42px;
+  color: var(--terracotta);
+  line-height: 1;
+}
+.proposal-text h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.proposal-text p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.proposal-tag {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--olive);
+  background: var(--green-bg);
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.proposal-tag.warn {
+  color: var(--red);
+  background: var(--red-bg);
+}
+.proposal-tag.gold {
+  color: #8a6d3b;
+  background: var(--gold-bg);
+}
+
+/* ============ SLIDE 5: FLOW ============ */
+.flow-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 0;
+}
+.flow-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.flow-section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.flow-section-title h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--ink);
+}
+.flow-section-title .tag {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  border: 1px solid var(--terracotta);
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.flow-section-title.recv .tag {
+  color: var(--olive);
+  border-color: var(--olive);
+}
+.flow-steps {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.flow-step {
+  flex: 1;
+  background: var(--cream-deep);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.flow-step:not(:last-child) {
+  margin-right: 28px;
+}
+.flow-step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  color: var(--terracotta);
+}
+.flow-section.recv .flow-step:not(:last-child)::after {
+  color: var(--olive);
+}
+.flow-step .step-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+.flow-step .step-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 14.5px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.flow-step .step-detail {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+.flow-step.highlighted {
+  background: var(--ink);
+  color: var(--cream);
+}
+.flow-step.highlighted .step-num,
+.flow-step.highlighted .step-detail { color: var(--gold-soft); }
+.flow-step.highlighted .step-name { color: var(--cream); }
+
+.flow-foot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(122, 111, 96, 0.3);
+}
+.flow-foot-icon {
+  width: 28px; height: 28px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14px;
+}
+.flow-foot p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.flow-foot p strong {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ============ SLIDE 6: BENEFITS ============ */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  flex: 1;
+  align-content: center;
+}
+.benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 26px;
+  background: var(--cream-deep);
+  border-top: 2px solid var(--olive);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.benefit:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow-medium);
+}
+.benefit-mark {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--olive);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 400;
+}
+.benefit h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.benefit p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* ============ SLIDE 7: RISKS ============ */
+.risks-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.risks-head {
+  display: grid;
+  grid-template-columns: 60px 1fr 1.4fr;
+  gap: 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ink);
+  margin-bottom: 8px;
+}
+.risks-head span {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-weight: 500;
+}
+.risk-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1.4fr;
+  gap: 32px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(122, 111, 96, 0.2);
+  align-items: start;
+}
+.risk-row:last-child { border-bottom: none; }
+.risk-row .num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 26px;
+  color: var(--red);
+  line-height: 1;
+}
+.risk-text h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -0.005em;
+}
+.risk-text p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.mitigation {
+  background: var(--green-bg);
+  padding: 14px 18px;
+  border-left: 2px solid var(--olive);
+}
+.mitigation .mit-label {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--olive);
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+.mitigation p {
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* ============ SLIDE 8: INVESTMENT ============ */
+.investment-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-content: center;
+}
+.invest-card {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--cream);
+  border: 1px solid var(--ink-mute);
+  border-color: rgba(122, 111, 96, 0.25);
+  position: relative;
+  transition: all 0.3s ease;
+}
+.invest-card::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 32px; height: 32px;
+  border-top: 1px solid var(--terracotta);
+  border-left: 1px solid var(--terracotta);
+}
+.invest-card:hover {
+  border-color: var(--terracotta);
+  transform: translateY(-4px);
+}
+.invest-card .label {
+  color: var(--terracotta);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+}
+.invest-card h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 18.5px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+.invest-card p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.invest-card .responsible {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 12.5px;
+  color: var(--ink);
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(122, 111, 96, 0.3);
+}
+
+/* ============ SLIDE 9: STAKEHOLDERS ============ */
+.stakeholders-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  align-content: center;
+}
+.stakeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 32px;
+  background: var(--cream-deep);
+  border-left: 3px solid var(--terracotta);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stakeholder:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 28px var(--shadow-medium);
+}
+.stakeholder.urgent { border-left-color: var(--red); }
+.stakeholder.legal { border-left-color: var(--olive); }
+.stakeholder.tech { border-left-color: var(--gold); }
+
+.stakeholder-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(122, 111, 96, 0.25);
+}
+.stakeholder-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.stakeholder-role {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-mute);
+}
+.stakeholder ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.stakeholder li {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+.stakeholder li::before {
+  content: '·';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  color: var(--terracotta);
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Hint */
+.kbd-hint {
+  position: fixed;
+  bottom: 80px;
+  right: 90px;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--ink-mute);
+  opacity: 0.5;
+  z-index: 40;
+  pointer-events: none;
+}
+.kbd {
+  display: inline-block;
+  padding: 1px 6px;
+  border: 1px solid var(--ink-mute);
+  border-radius: 3px;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  margin: 0 2px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1100px) {
+  .slide { padding: 60px 60px 80px; }
+  .deck-header { padding: 22px 60px; }
+  .deck-nav { padding: 22px 60px; }
+  .kbd-hint { right: 60px; }
+}
+@media (max-height: 760px) {
+  .slide { padding: 56px 80px 70px; }
+  .slide-header { margin-bottom: 30px; }
+  .slide-title { font-size: clamp(36px, 4.6vw, 60px); }
+  .cost-figure { font-size: 70px; }
+  .cover-title { font-size: clamp(48px, 7.5vw, 100px); }
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" style="width: 0;"></div>
+
+<header class="deck-header">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span>Charo Ruiz <em style="font-style: italic; color: var(--ink-mute);">Export</em></span>
+  </div>
+  <div class="meta">Documento interno · Borrador · Mayo 2026</div>
+</header>
+
+<div class="deck">
+
+  <!-- SLIDE 1: COVER -->
+  <section class="slide cover active" data-slide="0">
+    <div class="cover-left">
+      <div>
+        <div class="cover-eyebrow reveal reveal-1">
+          <span class="line"></span>
+          <span class="eyebrow">Propuesta interna · 2026</span>
+        </div>
+        <h1 class="display cover-title reveal reveal-2">
+          Política de<br>
+          <em>devoluciones</em>
+        </h1>
+        <p class="cover-subtitle reveal reveal-3">
+          Una revisión integral del marco operativo, jurídico y de protección de marca para nuestro canal online.
+        </p>
+      </div>
+      <div class="cover-meta reveal reveal-5">
+        <div class="cover-meta-item">
+          <span class="label">Autoría</span>
+          <span class="value">María</span>
+          <span style="font-size: 12px; color: var(--ink-mute); font-style: italic;">HR &amp; Administración</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="label">Para</span>
+          <span class="value">Sandra · Pablo · Paloma</span>
+          <span style="font-size: 12px; color: var(--ink-mute); font-style: italic;">Legal &amp; Dirección</span>
+        </div>
+        <div class="cover-meta-item">
+          <span class="label">Versión</span>
+          <span class="value">3.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="cover-right">
+      <div class="cover-decor reveal reveal-4">
+        <div class="cover-decor-num">— Capítulos —</div>
+        <div class="cover-decor-text">
+          <strong>09</strong>
+          secciones esenciales para entender el alcance, los motivos y las acciones a tomar.
+        </div>
+        <div class="cover-decor-num">M·CR·26</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: PROBLEM -->
+  <section class="slide" data-slide="1">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 01</span>
+        <span class="slide-num">— el contexto</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">El <em>problema</em> que justifica revisar la política.</h2>
+      <p class="slide-subtitle reveal reveal-3">Cuatro patrones recurrentes que hemos identificado en las devoluciones del canal online en los últimos meses.</p>
+    </div>
+    <div class="slide-content">
+      <div class="problem-grid">
+        <div class="problem-card reveal reveal-4">
+          <span class="num">01</span>
+          <h3>Wardrobing</h3>
+          <p>Prendas devueltas con signos compatibles con un uso único —típicamente tras un evento social— acompañado de olor a perfume, maquillaje en cuello o escote y arrugas características.</p>
+        </div>
+        <div class="problem-card reveal reveal-5">
+          <span class="num">02</span>
+          <h3>Devoluciones con prendas alteradas</h3>
+          <p>Manchas, olores impregnados (perfume, body mist, sudor, tabaco) y signos de uso visibles que impiden la reincorporación al stock comercial sin tratamiento que dañe la imagen.</p>
+        </div>
+        <div class="problem-card reveal reveal-6">
+          <span class="num">03</span>
+          <h3>Etiquetas manipuladas o ausentes</h3>
+          <p>Devoluciones recibidas sin la etiqueta original, retiradas o reubicadas, en algunos casos acompañadas de versiones contradictorias por parte del cliente sobre cómo ha ocurrido.</p>
+        </div>
+        <div class="problem-card reveal reveal-7">
+          <span class="num">04</span>
+          <h3>Clientes con patrones recurrentes</h3>
+          <p>Casos aislados de clientes con histórico anómalo, en ocasiones acompañados de presión y amenazas de chargeback con su entidad bancaria cuando la devolución se rechaza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: COST -->
+  <section class="slide" data-slide="2">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 02</span>
+        <span class="slide-num">— el impacto</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">El <em>coste real</em> para la marca.</h2>
+      <p class="slide-subtitle reveal reveal-3">Tres dimensiones del impacto, todas ellas cuantificables y todas ellas en aumento sin acción correctiva.</p>
+    </div>
+    <div class="slide-content">
+      <div class="cost-layout">
+        <div class="cost-pillar reveal reveal-4">
+          <span class="label">i · Económico</span>
+          <div class="cost-figure">
+            <span class="currency">€</span><span class="placeholder">···</span>
+          </div>
+          <span class="cost-tag">Pendiente de cuantificar</span>
+          <h3>Pérdida directa</h3>
+          <p>Producto no recuperable, gastos de transporte de devoluciones internacionales asumidos, tiempo de gestión del equipo logístico y de atención al cliente.</p>
+        </div>
+        <div class="cost-pillar reveal reveal-5">
+          <span class="label">ii · Reputacional</span>
+          <div class="cost-figure">
+            <span class="placeholder">·</span><span class="placeholder">·</span><span class="placeholder">·</span>
+          </div>
+          <span class="cost-tag">Riesgo difícil de revertir</span>
+          <h3>Imagen de marca</h3>
+          <p>Clientas que reciben prendas con olor a detergente, suavizante o cualquier producto de lavado perciben una falta de coherencia con los estándares Charo Ruiz.</p>
+        </div>
+        <div class="cost-pillar reveal reveal-6">
+          <span class="label">iii · Jurídico</span>
+          <div class="cost-figure">
+            <span class="placeholder">···</span>%
+          </div>
+          <span class="cost-tag">Exposición creciente</span>
+          <h3>Chargebacks y reclamaciones</h3>
+          <p>Disputas bancarias y reclamaciones de consumo cuando rechazamos devoluciones sin un dossier defensivo construido por defecto en cada operación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: PROPOSAL -->
+  <section class="slide" data-slide="3">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 03</span>
+        <span class="slide-num">— la respuesta</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">Cinco <em>líneas maestras</em> de la nueva política.</h2>
+      <p class="slide-subtitle reveal reveal-3">Una propuesta articulada en torno a cinco pilares jurídico-operativos, integrados con un protocolo de control reforzado.</p>
+    </div>
+    <div class="slide-content">
+      <div class="proposal-list">
+        <div class="proposal-item reveal reveal-4">
+          <span class="proposal-num">01</span>
+          <div class="proposal-text">
+            <h3>Etiqueta de seguridad obligatoria</h3>
+            <p>En todas las prendas, sin distinción de precio. Su retirada o manipulación implica el rechazo automático de la devolución.</p>
+          </div>
+          <span class="proposal-tag">Disuasión del wardrobing</span>
+        </div>
+        <div class="proposal-item reveal reveal-5">
+          <span class="proposal-num">02</span>
+          <div class="proposal-text">
+            <h3>Aceptación expresa en el checkout</h3>
+            <p>Casilla obligatoria que el cliente debe marcar antes de finalizar la compra, con timestamp registrado en el sistema.</p>
+          </div>
+          <span class="proposal-tag">Prueba documental indiscutible</span>
+        </div>
+        <div class="proposal-item reveal reveal-6">
+          <span class="proposal-num">03</span>
+          <div class="proposal-text">
+            <h3>Procedimiento de custodia de prendas rechazadas</h3>
+            <p>Plazos definidos, modalidades de reenvío reguladas (transitario propio o pago anticipado), disposición final formalizada.</p>
+          </div>
+          <span class="proposal-tag gold">Cierre operativo limpio</span>
+        </div>
+        <div class="proposal-item reveal reveal-7">
+          <span class="proposal-num">04</span>
+          <div class="proposal-text">
+            <h3>Régimen específico para mercados extracomunitarios</h3>
+            <p>Plazos reducidos, gastos siempre a cargo del cliente, aduanas no reembolsables, responsabilidad sobre documentación aduanera.</p>
+          </div>
+          <span class="proposal-tag gold">Coherente con el sector lujo</span>
+        </div>
+        <div class="proposal-item reveal reveal-8">
+          <span class="proposal-num">05</span>
+          <div class="proposal-text">
+            <h3>Prohibición de tratamiento correctivo sin autorización</h3>
+            <p>Lavado, vaporización, perfumado o cualquier intervención sobre una prenda devuelta requiere autorización expresa de dirección.</p>
+          </div>
+          <span class="proposal-tag warn">Protección de imagen de marca</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: FLOW -->
+  <section class="slide" data-slide="4">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 04</span>
+        <span class="slide-num">— el sistema</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">Cómo <em>funciona</em> el control.</h2>
+      <p class="slide-subtitle reveal reveal-3">Aprovechamos la trazabilidad técnica que ya tenemos: lector automático con timestamp en cada paquete, videovigilancia continua y zona designada de operación.</p>
+    </div>
+    <div class="slide-content">
+      <div class="flow-container">
+
+        <div class="flow-section reveal reveal-4">
+          <div class="flow-section-title">
+            <h4>Flujo de envío</h4>
+            <span class="tag">Outbound</span>
+          </div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <span class="step-num">01</span>
+              <span class="step-name">Picking</span>
+              <span class="step-detail">Prenda extraída de cesta, traslado directo a zona designada</span>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">02</span>
+              <span class="step-name">Verificación visual</span>
+              <span class="step-detail">Estado, etiqueta de seguridad, componentes</span>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">03</span>
+              <span class="step-name">Empaquetado</span>
+              <span class="step-detail">Prenda en envoltorio original</span>
+            </div>
+            <div class="flow-step highlighted">
+              <span class="step-num">04</span>
+              <span class="step-name">Lectura automática</span>
+              <span class="step-detail">Timestamp · si falla, se bloquea el envío</span>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">05</span>
+              <span class="step-name">Cierre y envío</span>
+              <span class="step-detail">Etiqueta y entrega al transportista</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-section recv reveal reveal-6">
+          <div class="flow-section-title recv">
+            <h4>Flujo de recepción</h4>
+            <span class="tag">Inbound · Devoluciones</span>
+          </div>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <span class="step-num">01</span>
+              <span class="step-name">Recepción del paquete</span>
+              <span class="step-detail">Traslado a zona designada sin abrir</span>
+            </div>
+            <div class="flow-step highlighted">
+              <span class="step-num">02</span>
+              <span class="step-name">Apertura frente a cámara</span>
+              <span class="step-detail">Timestamp · foto del contenido</span>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">03</span>
+              <span class="step-name">Inspección</span>
+              <span class="step-detail">Estado, olores, etiqueta, componentes</span>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">04</span>
+              <span class="step-name">Resolución</span>
+              <span class="step-detail">Aceptación · deducción · rechazo</span>
+            </div>
+            <div class="flow-step">
+              <span class="step-num">05</span>
+              <span class="step-name">Custodia o stock</span>
+              <span class="step-detail">Según resolución, sin tratamiento correctivo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-foot reveal reveal-8">
+          <span class="flow-foot-icon">i</span>
+          <p>Toda la operación queda registrada con <strong>timestamp automático</strong> y <strong>videovigilancia continua</strong>, generando un dossier defensivo por defecto en cada operación.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: BENEFITS -->
+  <section class="slide" data-slide="5">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 05</span>
+        <span class="slide-num">— los resultados</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">Qué <em>mejora</em> con esta política.</h2>
+      <p class="slide-subtitle reveal reveal-3">Seis beneficios concretos que se materializan desde el momento de la implementación.</p>
+    </div>
+    <div class="slide-content">
+      <div class="benefits-grid">
+        <div class="benefit reveal reveal-4">
+          <div class="benefit-mark">i</div>
+          <h3>Reducción del fraude</h3>
+          <p>La etiqueta de seguridad y el click-to-accept son medidas disuasorias estándar del sector lujo. Un cliente sabe desde el primer momento las reglas del juego.</p>
+        </div>
+        <div class="benefit reveal reveal-5">
+          <div class="benefit-mark">ii</div>
+          <h3>Protección jurídica</h3>
+          <p>Cada operación genera un dossier documental sin esfuerzo adicional: política, consentimiento, logs, vídeo, fotos. Trazabilidad completa.</p>
+        </div>
+        <div class="benefit reveal reveal-6">
+          <div class="benefit-mark">iii</div>
+          <h3>Defensa ante chargebacks</h3>
+          <p>Las contradicciones del cliente se vuelven visibles cuando hay registro objetivo. Las disputas bancarias se ganan con dossier preparado.</p>
+        </div>
+        <div class="benefit reveal reveal-7">
+          <div class="benefit-mark">iv</div>
+          <h3>Coherencia de marca</h3>
+          <p>Ninguna prenda con olor a detergente o suavizante llega jamás a una clienta nueva. La integridad sensorial se preserva en toda la cadena.</p>
+        </div>
+        <div class="benefit reveal reveal-8">
+          <div class="benefit-mark">v</div>
+          <h3>Trazabilidad completa</h3>
+          <p>Desde el picking hasta el cierre del paquete, y desde la recepción hasta la resolución de la devolución, todo queda registrado en un único punto.</p>
+        </div>
+        <div class="benefit reveal reveal-9">
+          <div class="benefit-mark">vi</div>
+          <h3>Empoderamiento del equipo</h3>
+          <p>El equipo logístico tiene una checklist clara y un protocolo único. No hay decisiones individuales sobre criterios subjetivos: hay procedimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: RISKS -->
+  <section class="slide" data-slide="6">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 06</span>
+        <span class="slide-num">— honestidad</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">Lo que puede <em>ir mal</em>, y cómo lo mitigamos.</h2>
+      <p class="slide-subtitle reveal reveal-3">Una propuesta seria contempla sus propios riesgos. Estos son los principales y su mitigación prevista.</p>
+    </div>
+    <div class="slide-content">
+      <div class="risks-table">
+        <div class="risks-head reveal reveal-4">
+          <span></span>
+          <span>Riesgo identificado</span>
+          <span>Mitigación prevista</span>
+        </div>
+        <div class="risk-row reveal reveal-5">
+          <span class="num">01</span>
+          <div class="risk-text">
+            <h4>Fricción con clientes legítimos</h4>
+            <p>Clientes que perciban la nueva política como excesivamente rígida o se sientan tratados con desconfianza pese a no haber hecho nada irregular.</p>
+          </div>
+          <div class="mitigation">
+            <div class="mit-label">Mitigación</div>
+            <p>Tono cuidado en la comunicación, lenguaje de marca alineado con el posicionamiento de lujo bohemio, FAQ específica y comunicación previa al lanzamiento.</p>
+          </div>
+        </div>
+        <div class="risk-row reveal reveal-6">
+          <span class="num">02</span>
+          <div class="risk-text">
+            <h4>Coste operativo de implantación</h4>
+            <p>Inversión en etiquetas físicas, formación del equipo, espacio físico designado y seguimiento durante el periodo de adaptación.</p>
+          </div>
+          <div class="mitigation">
+            <div class="mit-label">Mitigación</div>
+            <p>Aprovechamiento del lector y de la videovigilancia ya existentes, formación concentrada en una jornada y medición de retorno desde el primer mes.</p>
+          </div>
+        </div>
+        <div class="risk-row reveal reveal-7">
+          <span class="num">03</span>
+          <div class="risk-text">
+            <h4>Resistencia inicial del equipo</h4>
+            <p>El equipo logístico podría percibir el checklist y el doble control como burocracia añadida que ralentiza el flujo de trabajo diario.</p>
+          </div>
+          <div class="mitigation">
+            <div class="mit-label">Mitigación</div>
+            <p>Sesión de formación que explica el porqué y conecta cada paso con un caso real previo. Implicación del equipo en la mejora continua del protocolo desde el primer día.</p>
+          </div>
+        </div>
+        <div class="risk-row reveal reveal-8">
+          <span class="num">04</span>
+          <div class="risk-text">
+            <h4>Caso de cliente confundido por la etiqueta</h4>
+            <p>Posibilidad de que un cliente honesto retire la etiqueta de seguridad por desconocimiento y luego no pueda devolver la prenda.</p>
+          </div>
+          <div class="mitigation">
+            <div class="mit-label">Mitigación</div>
+            <p>Información en ficha de producto, click-to-accept específico, leyenda en el albarán y mención en el correo de envío. Cuádruple notificación previa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: INVESTMENT -->
+  <section class="slide" data-slide="7">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 07</span>
+        <span class="slide-num">— recursos</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">Qué <em>necesitamos</em> para hacerlo posible.</h2>
+      <p class="slide-subtitle reveal reveal-3">Inversión inicial repartida entre las áreas implicadas. Implementación inmediata.</p>
+    </div>
+    <div class="slide-content">
+      <div class="investment-grid">
+        <div class="invest-card reveal reveal-4">
+          <span class="label">i · Físico</span>
+          <h4>Etiquetas de seguridad</h4>
+          <p>Selección de proveedor, modelo y posición en cada tipología de prenda. Coste recurrente por unidad.</p>
+          <div class="responsible">— Responsable: Logística + Dirección</div>
+        </div>
+        <div class="invest-card reveal reveal-5">
+          <span class="label">ii · Documentación</span>
+          <h4>Conservación sistemática de pruebas</h4>
+          <p>Definición de plazos y procedimiento de archivo digital de fotos, vídeos, logs del lector y correspondencia, vinculados al número de pedido.</p>
+          <div class="responsible">— Responsable: Logística + Administración</div>
+        </div>
+        <div class="invest-card reveal reveal-6">
+          <span class="label">iii · Equipo</span>
+          <h4>Formación del personal logístico</h4>
+          <p>Una jornada de formación sobre el nuevo protocolo, el checklist operativo y el porqué de cada control.</p>
+          <div class="responsible">— Responsable: HR + Logística</div>
+        </div>
+        <div class="invest-card reveal reveal-7">
+          <span class="label">iv · Espacio</span>
+          <h4>Zona designada y custodia</h4>
+          <p>Acondicionamiento de la zona específica de envío y recepción, y de la zona separada de custodia de prendas rechazadas.</p>
+          <div class="responsible">— Responsable: Logística</div>
+        </div>
+        <div class="invest-card reveal reveal-8">
+          <span class="label">v · Legal</span>
+          <h4>Texto y validación jurídica</h4>
+          <p>Redacción definitiva de las cláusulas, click-to-accept, política de privacidad, registro interno de incidencias.</p>
+          <div class="responsible">— Responsable: Sandra Gallardo</div>
+        </div>
+        <div class="invest-card reveal reveal-9">
+          <span class="label">vi · Web</span>
+          <h4>Adaptación digital</h4>
+          <p>Actualización de fichas de producto, condiciones, checkout con casilla de aceptación y comunicación a clientes existentes.</p>
+          <div class="responsible">— Responsable: Equipo digital + Marketing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: STAKEHOLDERS -->
+  <section class="slide" data-slide="8">
+    <div class="slide-header">
+      <div class="slide-eyebrow-row reveal reveal-1">
+        <span class="line"></span>
+        <span class="eyebrow">Capítulo 08</span>
+        <span class="slide-num">— a continuación</span>
+      </div>
+      <h2 class="display slide-title reveal reveal-2">Qué <em>necesitamos</em> de cada interlocutor.</h2>
+      <p class="slide-subtitle reveal reveal-3">Cuatro áreas implicadas. Cuatro decisiones concretas para activar el proyecto.</p>
+    </div>
+    <div class="slide-content">
+      <div class="stakeholders-grid">
+        <div class="stakeholder legal reveal reveal-4">
+          <div class="stakeholder-head">
+            <span class="stakeholder-name">Sandra Gallardo</span>
+            <span class="stakeholder-role">Asesoría jurídica</span>
+          </div>
+          <ul>
+            <li>Validación de las cláusulas del documento de política revisada (v3).</li>
+            <li>Texto definitivo del click-to-accept en el checkout.</li>
+            <li>Base legal del registro interno de incidencias y conservación de pruebas.</li>
+            <li>Validación del régimen específico para mercados extracomunitarios.</li>
+          </ul>
+        </div>
+        <div class="stakeholder urgent reveal reveal-5">
+          <div class="stakeholder-head">
+            <span class="stakeholder-name">Pablo &amp; Paloma</span>
+            <span class="stakeholder-role">Dirección</span>
+          </div>
+          <ul>
+            <li>Aprobación general del proyecto y del calendario de implementación.</li>
+            <li>Decisión sobre el proveedor de etiquetas de seguridad y presupuesto asociado.</li>
+            <li>Validación del umbral de alta gama (500 €) y el régimen reforzado.</li>
+            <li>Autorización del procedimiento de custodia y disposición final de prendas.</li>
+          </ul>
+        </div>
+        <div class="stakeholder reveal reveal-6">
+          <div class="stakeholder-head">
+            <span class="stakeholder-name">Equipo logístico</span>
+            <span class="stakeholder-role">Centro logístico</span>
+          </div>
+          <ul>
+            <li>Acondicionamiento de la zona designada de envío y recepción.</li>
+            <li>Formación e implementación del checklist operativo.</li>
+            <li>Implantación del protocolo de custodia y zona separada de almacenamiento.</li>
+            <li>Reporte de incidencias y mejora continua del proceso.</li>
+          </ul>
+        </div>
+        <div class="stakeholder tech reveal reveal-7">
+          <div class="stakeholder-head">
+            <span class="stakeholder-name">Equipo digital</span>
+            <span class="stakeholder-role">Web · marketing</span>
+          </div>
+          <ul>
+            <li>Adaptación del checkout con casilla de aceptación obligatoria.</li>
+            <li>Actualización de fichas de producto y página de devoluciones.</li>
+            <li>Comunicación a clientes existentes con la entrada en vigor de la política.</li>
+            <li>Coordinación con Marketing para tono y materiales de comunicación.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="kbd-hint">
+  navega con <span class="kbd">←</span> <span class="kbd">→</span> o <span class="kbd">espacio</span>
+</div>
+
+<nav class="deck-nav">
+  <div class="dots" id="dots"></div>
+  <div class="nav-arrows">
+    <span class="slide-counter" id="counter">01 — 09</span>
+    <button class="arrow-btn" id="prev" aria-label="Anterior">‹</button>
+    <button class="arrow-btn" id="next" aria-label="Siguiente">›</button>
+  </div>
+</nav>
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  // Build dots
+  const dotsContainer = document.getElementById('dots');
+  for (let i = 0; i < total; i++) {
+    const b = document.createElement('button');
+    b.className = 'dot' + (i === 0 ? ' active' : '');
+    b.setAttribute('aria-label', 'Ir al capítulo ' + (i+1));
+    b.addEventListener('click', () => go(i));
+    dotsContainer.appendChild(b);
+  }
+  const dots = document.querySelectorAll('.dot');
+
+  const counter = document.getElementById('counter');
+  const progress = document.getElementById('progress');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  function pad(n){ return n.toString().padStart(2,'0'); }
+
+  function go(i) {
+    if (i < 0 || i >= total) return;
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    counter.textContent = pad(current+1) + ' — ' + pad(total);
+    progress.style.width = ((current+1)/total*100) + '%';
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+    // Re-trigger animations by toggling visibility
+    const reveals = slides[current].querySelectorAll('.reveal');
+    reveals.forEach(r => {
+      r.style.animation = 'none';
+      r.offsetHeight; // force reflow
+      r.style.animation = '';
+    });
+  }
+
+  prevBtn.addEventListener('click', () => go(current - 1));
+  nextBtn.addEventListener('click', () => go(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(current + 1); }
+    else if (e.key === 'ArrowLeft') { go(current - 1); }
+    else if (e.key === 'Home') { go(0); }
+    else if (e.key === 'End') { go(total - 1); }
+    else if (/^\d$/.test(e.key)) {
+      const n = parseInt(e.key, 10);
+      if (n >= 1 && n <= total) go(n - 1);
+    }
+  });
+
+  // Initial state
+  prevBtn.disabled = true;
+  progress.style.width = (1/total*100) + '%';
+  counter.textContent = '01 — ' + pad(total);
+})();
+</script>
+
+</body>
+</html>
